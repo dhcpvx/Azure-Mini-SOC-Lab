@@ -292,8 +292,11 @@ You can also map the incidents to a known attack/technique methodology using the
 Here are pages of an example report.
 
 <img width="737" height="711" alt="image" src="https://github.com/user-attachments/assets/3d2ccbe8-7ec0-4cd0-b0e6-ee67b74a13e2" />
+
 <img width="787" height="706" alt="image" src="https://github.com/user-attachments/assets/80f79a82-77ae-44b5-a52f-29d313710245" />
+
 <img width="687" height="914" alt="image" src="https://github.com/user-attachments/assets/2b1d4a9d-f4fe-49ba-8ab1-eaa7f7191c1d" />
+
 <img width="673" height="830" alt="image" src="https://github.com/user-attachments/assets/d6566ee8-ca9c-412e-800b-1af728dee49f" />
 
 
@@ -362,6 +365,7 @@ Finally, documenting the scope, evidence and post-incident review and playbook u
 ## Cost Management
 I navigated to my Resource Groups to prevent any further charges to my account.
 <img width="1675" height="253" alt="image" src="https://github.com/user-attachments/assets/6f50f75e-87c8-45be-bdf0-33f1f7f6e6f1" />
+
 <img width="855" height="696" alt="image" src="https://github.com/user-attachments/assets/b29c6da8-4c17-4edd-a1d5-dd7b36381d34" />
 
 This contains many of the objects created for this lab that would incur fees if I were to keep them running. I also deleted any other automatically populated RSGs.
