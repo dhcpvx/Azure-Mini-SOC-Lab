@@ -378,6 +378,7 @@ This is to avoid any extra fees here are some tips to avoid extra charges,
 * Configure budget alerts.
 * Disable unused Sentinel connectors.
 * Review Log Analytics ingestion and retention settings.
+* Always *VERIFY* what Azure Subscription that you currently have and or are using to understand what charges could possibly incur if things go wrong. In case you have used your 200 free credits, you may still be billed and be liable to fees.
 
 For lab environments, deleting the entire resource group is often the fastest method of eliminating ongoing costs.
 
