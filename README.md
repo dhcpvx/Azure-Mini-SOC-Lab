@@ -76,6 +76,8 @@ Created Windows 10 Honeypot:
 ### Network Security Group
 
 The default RDP-only rule was removed.
+<img width="1394" height="434" alt="image" src="https://github.com/user-attachments/assets/fbb90aaa-81a2-4745-86d1-abcead6dbe3c" />
+
 
 A new inbound rule was created allowing:
 
@@ -271,6 +273,60 @@ Within hours of exposing the VM:
 
 This demonstrates how quickly exposed systems attract malicious attention.
 
+
+As an additional task, I configured alerts and incident reporting 
+ * Added merged incidents to filter idential attempts into one incident
+ * Setup alerts to notify me of attempts of logins and turn them into incidents in the Sentinel dashboard.
+<img width="1673" height="549" alt="image" src="https://github.com/user-attachments/assets/745f06e0-3e35-483a-9ad5-2fe89b60fe9f" />
+
+<img width="1442" height="717" alt="image" src="https://github.com/user-attachments/assets/bfa61b65-4cda-4d49-a98a-f688cef06155" />
+
+You can also map the incidents to a known attack/technique methodology using the MITRE & ATT&CK database.
+
+<img width="1503" height="713" alt="image" src="https://github.com/user-attachments/assets/d5dde620-4df4-4677-8385-528a77d22e2b" />
+
+
+
+* Resolving the incident gives an ability to generate a report, which can be analyzed and studied.
+
+Here are pages of an example report.
+
+<img width="737" height="711" alt="image" src="https://github.com/user-attachments/assets/3d2ccbe8-7ec0-4cd0-b0e6-ee67b74a13e2" />
+<img width="787" height="706" alt="image" src="https://github.com/user-attachments/assets/80f79a82-77ae-44b5-a52f-29d313710245" />
+<img width="687" height="914" alt="image" src="https://github.com/user-attachments/assets/2b1d4a9d-f4fe-49ba-8ab1-eaa7f7191c1d" />
+<img width="673" height="830" alt="image" src="https://github.com/user-attachments/assets/d6566ee8-ca9c-412e-800b-1af728dee49f" />
+
+
+
+
+* Scope and Evidence/Response were left out for this example, however are very important.
+
+  Scope defines the depth of a threat as in what users, assets, or services are affected and how far the compromise has spread. In our case as far as we know and from our reports, there are IoCs (Indicators of Compromise) with attempts to get in but no evidence of lateral movement, or exploitation within our system. Our affected entities would be our fake server, JAG-FSV1-EAST1.
+
+  We would perform incident response by placing the device under quarantine and enabling firewall on both the endpoint, and our network to prevent further attacks, as well as disconnecting the server from the network to prevent any possible spread of attacks.
+
+The evidence, would contain any forensic data nad supporting logs which are posted above but are not included in the report, this includes the Azure Monitor Logs, MS Entra Audit Logs, NSG flow logs and other sources such as Graph views showing relationships or any automated remediations taken by MS Defender XDR.
+
+
+We would then move to response actions as mentioned above, which is containing (quarantine) -- isolating comrpomsied devices, disabling any affected accounts and blocking malicious IPs.
+
+The next step is to remove malware, clean compromised systems and remove unauthorized roles.
+
+Followed by a Recovery to the last known good state after validation.
+
+Finally, documenting the scope, evidence and post-incident review and playbook updates.
+
+
+
+
+
+  
+
+
+
+
+
+
 ---
 
 ## Skills Demonstrated
@@ -304,8 +360,13 @@ This demonstrates how quickly exposed systems attract malicious attention.
 ---
 
 ## Cost Management
+I navigated to my Resource Groups to prevent any further charges to my account.
+<img width="1675" height="253" alt="image" src="https://github.com/user-attachments/assets/6f50f75e-87c8-45be-bdf0-33f1f7f6e6f1" />
+<img width="855" height="696" alt="image" src="https://github.com/user-attachments/assets/b29c6da8-4c17-4edd-a1d5-dd7b36381d34" />
 
-To avoid unexpected Azure charges:
+This contains many of the objects created for this lab that would incur fees if I were to keep them running. I also deleted any other automatically populated RSGs.
+
+This is to avoid any extra fees here are some tips to avoid extra charges,
 
 * Stop or deallocate VMs when not in use.
 * Delete unused resource groups.
